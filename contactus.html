@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HiTech - The Future Industry</title>
+	<link rel="stylesheet" type="text/css" href="contact.css">
+  <link rel="icon" type="image/png" href="icon.png">
+</head>
+<body>
+
+<div class="contact-container">
+  <div class="contact-left">
+    <img src="hitech.png" alt="Website Logo" class="contact-logo">
+    <div class="contact-info">
+      <p><strong>Location:</strong> Bonifacio, Manila, Philippines</p>
+      <p><strong>Contact Number:</strong> +63 987 654 3210</p>
+      <p><strong>Email:</strong> hightectteam@gmail.com</p>
+    </div>
+  </div>
+
+  <div class="contact-right">
+    <form class="contact-form">
+      <h2>Contact Us</h2>
+      <input type="text" name="name" placeholder="Your Name (optional)">
+      <input type="email" name="email" placeholder="Your Email Address">
+      <textarea name="message" placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</div>
+
+<nav class="behind-log"> </nav>
+<nav class="behind-cart"> </nav>
+<nav class="navbehind"> </nav>
+
+<nav class="nav">
+    <div class="container">
+    <div class="left">
+        <a href="index.html">Home</a>
+        <a href="website - Copy.html">Products</a>
+    </div>
+
+    <div class="clickable">
+      <div class="clicks">
+        <a href="#"><img src="triangle.webp" class="click"></a>
+      </div>
+    </div>
+
+<div class="extra-info">
+  <div class="iconcontain">
+      <div class="fb">
+        <a href="https://web.facebook.com/lance.motol"><img src="fbicon.png" class="fbicon"></a>
+        <a href="https://www.tiktok.com/@lancy055"><img src="tiktokicon.png" class="tiktokicon"></a>
+        <a href="https://www.instagram.com/weakshthead/"><img src= "igicon.png" class="igicon"></a>
+      </div>
+      <h1>This website is for project purposes only</h1>
+  </div>
+</div>
+
+    <div class="right">
+        <a id="aboutLink" href="aboutus.html">About</a>
+        <a class="clickses" href="#">ContactUs</a>
+    </div>
+    </div>
+</nav>
+
+<nav class="login">
+      <div class="loginbtn">
+        <a href="#"><img src="login.webp" class="log"></a>
+      </div>
+</nav>
+
+<nav class="cart">
+      <div class="cartbtn">
+        <a href="#"><img src="cart.webp" class="car"></a>
+      </div>
+</nav>
+
+<div id="loginOverlay" class="login-overlay" aria-hidden="true">
+  <div class="login-form">
+    <h2>Sign Up</h2>
+    <input type="text" placeholder="Username or Email">
+    <input type="password" placeholder="Password">
+    <button type="submit">Sign Up</button>
+
+    <p class="switch-account">
+      Already have an account? <a href="#">Log in here</a>
+    </p>
+
+    <p class="close-login">Close</p>
+  </div>
+</div>
+
+<div id="cartOverlay" class="cart-overlay" aria-hidden="true">
+  <div class="cart-form">
+    <h2>Your Cart</h2>
+    <div class="cart-items">
+      <p>No items in your cart yet.</p>
+
+    </div>
+    <button class="checkout-btn">Proceed to Checkout</button>
+    <p class="close-cart">Close</p>
+  </div>
+</div>
+
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const cartBtn = document.querySelector('.cartbtn a');
+  const cartOverlay = document.getElementById('cartOverlay');
+  const closeCart = document.querySelector('.close-cart');
+
+  cartBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    cartOverlay.classList.toggle('show');
+  });
+
+  closeCart.addEventListener('click', () => {
+    cartOverlay.classList.remove('show');
+  });
+
+  cartOverlay.addEventListener('click', (e) => {
+    if (e.target === cartOverlay) {
+      cartOverlay.classList.remove('show');
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') cartOverlay.classList.remove('show');
+  });
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const loginBtn = document.querySelector('.loginbtn a');
+  const loginOverlay = document.getElementById('loginOverlay');
+  const closeLogin = document.querySelector('.close-login');
+
+  loginBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    loginOverlay.classList.add('show');
+  });
+
+  closeLogin.addEventListener('click', () => {
+    loginOverlay.classList.remove('show');
+  });
+
+  loginOverlay.addEventListener('click', (e) => {
+    if (e.target === loginOverlay) {
+      loginOverlay.classList.remove('show');
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      loginOverlay.classList.remove('show');
+    }
+  });
+});
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const navToggle = document.querySelector('.click');
+  const navbar = document.querySelector('.nav');
+  const extraInfo = document.querySelector('.extra-info');
+  const navToggles = document.querySelector('.clickses');
+
+  navToggle.addEventListener('click', (e) => {
+    e.preventDefault();
+    navbar.classList.toggle('up');
+    extraInfo.classList.toggle('show');
+  })
+  navToggles.addEventListener('click', (e) => {
+    e.preventDefault();
+    navbar.classList.toggle('up');
+    extraInfo.classList.toggle('show');
+  })
+  });
+</script>
+
+</body>
+</html>
+
